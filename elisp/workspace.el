@@ -24,4 +24,8 @@
   :config
   (counsel-projectile-mode))
 
+(use-package all-the-icons)
+(use-package neotree)
+(setq neo-theme 'icons)
+
 (provide 'workspace)

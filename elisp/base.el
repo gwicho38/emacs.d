@@ -33,10 +33,10 @@
       make-backup-files                  nil
       display-line-numbers-type          'global
       inhibit-startup-message            t
-      use-package-always-ensure          t
-      xterm-mouse-mode                   t
-      toggle-word-wrap                   t)
+      use-package-always-ensure          t)
 
+;; enable word wrap
+(toggle-word-wrap)
 ;; Keep buffers automatically up to date
 (global-auto-revert-mode t)
 

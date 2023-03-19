@@ -7,12 +7,12 @@
 (use-package general
   :after evil
   :config
-  (general-create-definer alpha2phi/leader-keys
+  (general-create-definer lefv/leader-keys
     :keymaps '(normal insert visual emacs)
     :prefix "SPC"
     :global-prefix "C-SPC")
 
-  (alpha2phi/leader-keys
+  (lefv/leader-keys
     "t"  '(:ignore t :which-key "theme")
     "tt" '(counsel-load-theme :which-key "choose theme")
 
@@ -24,7 +24,7 @@
     "ff" '(counsel-fzf :which-key "fuzzy find")
     "fb" '(switch-to-buffer :which-key "switch buffer")
     "fx" '(counsel-M-x :which-key "M-x")
-    "ft" '(treemacs :which-key "treemacs")
+    "ft" '(treemacs :which-key "neotree")
     "fd" '(dired :which-key "dired")
     "fr" '(revert-buffer :which-key "revert-buffer")
     "fs" '(save-buffer :which-key "save-buffer")
@@ -53,12 +53,26 @@
     "ot" '(counsel-org-tag :which-key "org tag")
     "ose" '(org-set-effort :which-key "org set effort")
     "oc" '(org-capture :which-key "org capture")
+
+    "r"  '(:ignore t :which-key "roam")
+    "rb" '(org-roam-buffer-toggle :which-key "buffer")
+    "rf" '(org-roam-node-find :which-key "find")
+    "ri" '(org-roam-node-insert :which-key "insert")
+    "rI" '(org-roam-node-insert-immediate :which-key "insert immediate")
+    "rF" '(lefv/org-roam-find-project :which-key "find project")
+    "rt" '(lefv/org-roam-capture-task :which-key "capture task")
+    "rI" '(lefv/org-roam-capture-inbox :which-key "capture inbox")
+    "rd" '(:ignore t :which-key "dailies")
+    "rdt" '(org-roam-dailies-capture-today :which-key "capture today")
+    "rdy" '(org-roam-dailies-capture-yesterday :which-key "capture yesterday")
+    "rdT" '(org-roam-dailies-capture-tomorrow :which-key "capture tomorrow")
+
     ;;"obt" '(org-babel-tangel :which-key "org babel tangel")
 
-    "s"  '(:ignore t :which-key "system")
-    "st" '(eshell :which-key "eshell")
-    "sb" '(split-window-below :which-key "split window below")
-    "sr" '(split-window-right :which-key "split window right")
+    "w"  '(:ignore t :which-key "window")
+    "wt" '(eshell :which-key "eshell")
+    "wb" '(split-window-below :which-key "split window below")
+    "wr" '(split-window-right :which-key "split window right")
 
     ))
 

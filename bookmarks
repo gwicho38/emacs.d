@@ -2,4 +2,9 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-()
+(("key-maps"
+ (filename . "~/.emacs.d/elisp/keymappings.el")
+ (front-context-string . ";;; keymappings.")
+ (rear-context-string)
+ (position . 1))
+)

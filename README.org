@@ -1,0 +1,5 @@
+* LEFV Emacs Config Readme
+
+** Sources:
+
+- https://systemcrafters.net/build-a-second-brain-in-emacs/5-org-roam-hacks/

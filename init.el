@@ -25,6 +25,9 @@
 ;; Org mode config
 (require 'organize)
 
+;; Bookmarks config
+(require 'mark)
+
 ;; Git using Magit
 (require 'vcs)
 

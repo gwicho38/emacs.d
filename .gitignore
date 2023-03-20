@@ -1,0 +1,13 @@
+.cache/
+.extensions/vscode/
+auto-save-list/
+eln-cache/
+elpa/
+transient/
+url/
+.lsp-session-v1
+bookmarks
+ede-projects.el
+org-roam.db
+projectile-bookmarks.eld/
+recentf

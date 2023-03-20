@@ -92,5 +92,6 @@
 (global-set-key (kbd "C-c <up>") 'evil-window-up)
 (global-set-key (kbd "C-c <down>") 'evil-window-down)
 
+(xterm-mouse-mode 1)
 (provide 'keymappings)
 ;;; keymappings.el ends here

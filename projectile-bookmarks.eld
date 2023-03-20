@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/.dotfiles/" "~/.zprezto/" "~/.nvm/" "~/.alacritty-shell/" "~/.SpaceVim/")
+("~/.dotfiles/" "~/.emacs.d/" "~/.zprezto/" "~/.nvm/" "~/.alacritty-shell/" "~/.SpaceVim/")

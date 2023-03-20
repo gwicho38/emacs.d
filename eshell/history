@@ -9,3 +9,11 @@ ls
 cd roam/
 ls
 exit
+cd
+ls
+cd ~/.emacs.d/
+git status
+git add .
+git commit -m "Working stable commit with kbds for window and bookmarks."
+clear
+clear

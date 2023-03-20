@@ -1,4 +1,5 @@
 .cache/
+.extensions/
 .extensions/vscode/
 auto-save-list/
 eln-cache/
@@ -11,3 +12,4 @@ ede-projects.el
 org-roam.db
 projectile-bookmarks.eld/
 recentf
+eshell/

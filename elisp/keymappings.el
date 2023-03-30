@@ -60,7 +60,7 @@
     "rbi" '(org-roam-node-insert :which-key "insert")
     "rbI" '(org-roam-node-insert-immediate :which-key "insert immediate")
     "rf" '(:ignore t :which-key "find")
-    "rfn" '(org-roam-node-find :which-key "find")
+    "rfn" '(org-roam-node-find :which-key "node")
     "rfp" '(lefv/org-roam-find-project :which-key "project")
     "rc" '(:ignore t :which-key "capture")
     "rct" '(lefv/org-roam-capture-task :which-key "capture task")

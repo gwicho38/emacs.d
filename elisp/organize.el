@@ -182,11 +182,12 @@ capture was not aborted."
   ;; Capture the new task, creating the project file if necessary
   (org-roam-capture- :node (org-roam-node-read
                             nil
-                            (lefv/org-roam-filter-by-tag "Project"))
+                            (lefv/org-roam-filter-by-tag "project"))
                      :templates '(("p" "project" plain "** TODO %?"
                                    :if-new (file+head+olp "%<%Y%m%d%H%M%S>-${slug}.org"
-                                                          "#+title: ${title}\n#+category: ${title}\n#+filetags: Project"
+                                                          "#+title: ${title}\n#+category: ${title}\n#+filetags: project"
                                                           ("Tasks"))))))
+
 
 (defun lefv/org-roam-copy-todo-to-today ()
   (interactive)

@@ -45,12 +45,22 @@
   :hook (org-mode . lefv/org-mode-setup)
   :config
   (setq org-ellipsis " ▾")
-
   (setq org-agenda-start-with-log-mode t)
   (setq org-log-done 'time)
   (setq org-log-into-drawer t)
   (setq org-agenda-files
-      '("~/org/agenda/"))
+	'("~/org/agenda/"))
+  (global-set-key (kbd "C-c c") 'org-capture)
+  (setq org-default-notes-file "~/org/lefv/lefv.org")
+  (setq org-capture-templates
+      '(("t" "todo" entry (file+headline "~/org/template/todo.org" "Tasks")
+         "* TODO %?\n  %i\n  %a")
+        ("r" "Reference" entry (file+headline "~/org/references.org" "References")
+         "* %^{Title}\n:PROPERTIES:\n:Created: %U\n:Author: %^{Author}\n:URL: %^{URL}\n:END:\n\nSource: [[%\\3][%\\2]]\n\n%?\n\n%:annotation"
+         :empty-lines 1
+         :immediate-finish nil
+         :prepend t
+         :unnarrowed t)))
 
  (setq org-todo-keywords
     '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)")
@@ -81,8 +91,7 @@
 )
 
 (use-package org-bullets
-  :after org
-  :hook (org-mode . org-bullets-mode)
+  :after org  :hook (org-mode . org-bullets-mode)
   :custom
   (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
 
@@ -101,21 +110,10 @@
   (setq org-roam-v2-ack t)
   :custom
   (org-roam-directory "~/org/roam/")
+  (add-to-list 'load-path "~/.emacs.d/org/")
+  (require 'default)
   (setq org-roam-dailies-directory "~/org/roam/daily/")
   (org-roam-completion-everywhere t)
-  (org-roam-capture-templates
-   '(("d" "default" plain
-      "%?"
-      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+date: %U\n")
-      :unnarrowed t)
-     ("r" "ref" plain
- "\n* Source: %^{source}\n\nTopic: %^{topic}\nTitle: ${title}\n Note\n\n%?"
- :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
- :unnarrowed t)
-     ("p" "project" plain "* Description\n\n%?\n\n* Tasks\n\n** TODO Add initial tasks\n\n* Dates\n\n"
-      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+filetags: project")
- :unnarrowed t)
-     ))
   :config
   (org-roam-setup)
   (org-roam-db-autosync-mode))

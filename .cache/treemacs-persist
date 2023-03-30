@@ -3,3 +3,5 @@
  - path :: ~/.dotfiles/emacs.d
 ** .emacs.d
  - path :: ~/.emacs.d
+** org
+ - path :: ~/org
